@@ -70,3 +70,51 @@ footer p {
 .search input{
     height: 30px;
 }
+.modalSign{
+    display: none;
+}
+.modalSign.active{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    gap: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    z-index: 1000;
+    color: white;
+}
+.modalSign .closer{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.modalFilm{
+    display: none;
+}
+.modalFilm.active{
+    display: flex;
+    position: relative;
+    gap: 25px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 1000;
+    color: white;
+}
+.modalFilm .closer{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.closer{
+    padding: 10px;
+    border: 1px solid white ;
+    border-radius: 50%;
+}
