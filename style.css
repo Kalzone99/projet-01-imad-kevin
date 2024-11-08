@@ -29,9 +29,46 @@ header{
     padding: 0px 150px;
 }
 section{
-    background-color: antiquewhite;
-    height: 300px;
+    height: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    color: white;
+    
+}
+section h2{
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+section li img{
+    width: 100%;
+    height: 100%;
+    
+}
+.s3List{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+.s3List::after{
+    content: ""; 
+    position: absolute; 
+    bottom: -10px;
+    height: 1px; 
+    width: 475px;
+    z-index: 1000;
+    background-color: white;
+}
+.s3List li a{
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 7px;
+    border-radius: 3px;
+    
 }
 footer{
     width: 100%;
@@ -77,10 +114,10 @@ footer p {
 .search input{
     height: 30px;
 }
-/*.modalSign{
-    display: none;
-}*/
 .modalSign{
+    display: none;
+}
+.modalSign.active{
     display: flex;
     flex-direction: column;
     padding: 20px;
