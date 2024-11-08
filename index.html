@@ -11,6 +11,10 @@
 <body>
     <div class="container">
 
+
+        <!----------------------NAVBAR----------------------------->
+
+
         <header>
             <div class="logo">
                 <h2><span>BE</span>MOVIES</h2>
@@ -26,9 +30,16 @@
             </div>
         </header>
 
+        
+        <!--------------------MODAL POUR LE SIGNIN EN FLEX COLUMN------------------------------------->
+
+
         <div class="modalSign">
+            <!--bouton de fermeture-->
             <button class="closer">X</button>
-            <div class="signContent">
+
+            <div class="signContainer">
+                <!--div en flex row pour les deux boutons-->
                 <div class="buttons">
                     <button class="sign">SIGNUP</button>
                     <button class="log">LOGIN</button>
@@ -36,6 +47,7 @@
                 <div class="content">
                     <input type="text" placeholder=" Username" id="user">
                     <input type="text" placeholder=" Password" id="pass">
+                    <!--div a part pour la checkbox pour qu elle soit a droite et pas au centre-->
                     <div class="check">
                         <input type="checkbox" name="Remember me" id="box">
                         <label for="box">Remember me</label>
@@ -49,8 +61,14 @@
                 
             </div>
         </div>
+
+
+        <!--------------------MODAL POUR CONTENU FILM EN FLEX COLUMN------------------------------------->
+
+
         <div class="modalFilm">
             <button class="closer">X</button>
+            <!--div en flex row pour l image et le content-->
             <div class="filmContainer">
                 <div class="filmImg">
 
@@ -61,6 +79,10 @@
             </div>
         </div>
 
+
+        <!--------------------SEARCH + 3 SECTIONS SLIDERS------------------------------------->
+
+
         <div class="body">
 
             <div class="search">
@@ -69,6 +91,11 @@
                     &#10132
                 </button>
             </div>
+
+
+            <!--------------------SECTION1------------------------------------->
+
+
             <section class="splide" aria-label="Splide" id="splide">
                 <div class="splide__track">
                     <h2>Results for</h2>
@@ -80,6 +107,11 @@
                     </ul>
                 </div>
             </section>
+
+
+            <!--------------------SECTION2------------------------------------->
+
+
             <section class="splide" aria-label="Splide" id="splide1">
                 <div class="splide__track">
                     <h2>Latest release</h2>
@@ -91,6 +123,10 @@
                     </ul>
                 </div>
             </section>
+
+            <!--------------------NAVBAR + SECTION3------------------------------------->
+
+
             <section class="splide" aria-label="Splide" id="splide2">
                 <h2>Movies by genre</h2>
                 <div class="s3Menu">
@@ -115,6 +151,9 @@
 
 
         </div>
+
+
+        <!--------------------FOOTER------------------------------------->
         
         <footer>
             <div class="logo">
@@ -130,8 +169,14 @@
             <p>@2023 - All rights reserved</p>
         </footer>
     </div>
+
+    <!--------------------SCRIPT SPLIDER------------------------------------>
+
+
     <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
     <script>
+        
+        //Variable qui contient un objet json avec tout les paramattres qui vont bien pour les 3 sliders
         const splideParam = {
                 perPage: 8,
                 fixedHeight: '230px',
@@ -157,7 +202,9 @@
                     }
                 }
 
-            }; 
+        };
+
+        //Eventlistener qui verifie que tt le DOM soit bien chargé avant de faire pop les sliders dans les sections avec les paramattres contenu dans la variable au dessus ("splideParam")
         document.addEventListener( 'DOMContentLoaded', function() {
             var splide = new Splide( '#splide', splideParam);
             splide.mount();

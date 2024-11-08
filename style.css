@@ -133,7 +133,7 @@ footer p {
     z-index: 1000;
     color: white;
 }
-.signContent{
+.signContainer{
     padding: 35px;
 }
 .modalSign .buttons{
