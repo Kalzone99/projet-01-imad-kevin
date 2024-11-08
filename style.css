@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 50px;
     background: #191B20;
 }
-.body{
+
+.body {
     padding: 0px 150px;
     display: flex;
     gap: 80px;
     flex-direction: column;
     align-items: center;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +32,8 @@ header{
     background: #141517;
     padding: 0px 150px;
 }
-section{
+
+section {
     height: auto;
     width: 100%;
     display: flex;
@@ -36,43 +41,50 @@ section{
     gap: 30px;
     align-items: center;
     color: white;
-    
+
 }
-section h2{
+
+section h2 {
     font-size: 0.8em;
     font-weight: 300;
     margin-bottom: 5px;
 }
-section li img{
+
+section li img {
     width: 100%;
     height: 100%;
-    
+
 }
-.s3List{
+
+.s3List {
     display: flex;
     justify-content: center;
     gap: 30px;
     position: relative;
 }
-.s3List::after{
-    content: ""; 
-    position: absolute; 
+
+.s3List::after {
+    content: "";
+    position: absolute;
     bottom: -10px;
-    height: 1px; 
+    height: 1px;
     width: 475px;
     background-color: white;
 }
-.s3List li a{
+
+.s3List li a {
     color: white;
     font-size: 0.8em;
     padding: 3px 7px;
     border-radius: 3px;
-    
+
 }
-.s3List li a:hover{
+
+.s3List li a:hover {
     color: #CC0000;
 }
-footer{
+
+footer {
     width: 100%;
     height: 120px;
     padding: 0px 150px;
@@ -81,29 +93,36 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
 footer p {
     color: grey;
     font-size: 0.6rem;
 }
-.logo span{
-    color:#CC0000;
+
+.logo span {
+    color: #CC0000;
 
 }
-.logo h2{
+
+.logo h2 {
     color: white;
 }
-.menu{
+
+.menu {
     display: flex;
     gap: 20px;
     font-size: 0.6rem;
 }
-.menu a{
+
+.menu a {
     color: white;
 }
-.menu a:hover{
-    color:#CC0000;
+
+.menu a:hover {
+    color: #CC0000;
 }
-.search button{
+
+.search button {
     color: white;
     padding: 6px 10px;
     background: #CC0000;
@@ -113,13 +132,16 @@ footer p {
     cursor: pointer;
 
 }
-.search input{
+
+.search input {
     height: 30px;
 }
-.modalSign{
+
+.modalSign {
     display: none;
 }
-.modalSign.active{
+
+.modalSign.active {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -133,43 +155,55 @@ footer p {
     z-index: 1000;
     color: white;
 }
-.signContainer{
+
+.signContainer {
     padding: 35px;
 }
-.modalSign .buttons{
+
+.modalSign .buttons {
     margin: 0px 0px 35px 0px;
 }
-#box{
+
+#box {
     align-self: flex-start;
 }
-.buttons{
+
+.buttons {
     display: flex;
-   
+
 }
-.modalSign .content{
+
+.modalSign .content {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
 }
-.modalSign a{
+
+.modalSign a {
     color: #CC0000;
 }
-.forgotSign{
+
+.forgotSign {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 0.7rem;
 }
-#user, #pass{
+
+#user,
+#pass {
     height: 25px;
 }
-.check{
+
+.check {
     font-size: 0.7rem;
     margin-bottom: 20px;
     font-weight: 100;
 }
-.sign, .log{
+
+.sign,
+.log {
     width: 200px;
     height: 25px;
     border-radius: 0px;
@@ -178,7 +212,8 @@ footer p {
     letter-spacing: 1.5px;
     cursor: pointer;
 }
-.sign{
+
+.sign {
     background-color: black;
     color: white;
     border-top-left-radius: 3px;
@@ -187,14 +222,16 @@ footer p {
     border-right: none;
 
 }
-.log{
+
+.log {
     background-color: #CC0000;
     border: none;
     color: white;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.content button{
+
+.content button {
     height: 25px;
     background-color: #CC0000;
     color: white;
@@ -203,10 +240,12 @@ footer p {
     letter-spacing: 1px;
     font-size: 0.7rem;
 }
-.modalFilm{
+
+.modalFilm {
     display: none;
 }
-.modalFilm.active{
+
+.modalFilm.active {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -220,27 +259,30 @@ footer p {
     z-index: 1000;
     color: white;
 }
-.filmContainer{
+
+.filmContainer {
     display: flex;
     align-items: center;
     gap: 30px;
 }
-.filmImg{
+
+.filmImg {
     background-color: blue;
     width: 200px;
     height: 35vh;
 }
-.filmContent{
+
+.filmContent {
     padding: 20px;
     width: 400px;
     height: 50vh;
     background-color: yellow;
 }
 
-.closer{
+.closer {
     padding: 1px 3px;
     font-size: 0.5rem;
-    border: 1px solid white ;
+    border: 1px solid white;
     border-radius: 50%;
     background-color: black;
     color: white;
