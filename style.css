@@ -60,7 +60,6 @@ section li img{
     bottom: -10px;
     height: 1px; 
     width: 475px;
-    z-index: 1000;
     background-color: white;
 }
 .s3List li a{
@@ -177,6 +176,7 @@ footer p {
     font-size: 0.6rem;
     font-weight: 600;
     letter-spacing: 1.5px;
+    cursor: pointer;
 }
 .sign{
     background-color: black;
