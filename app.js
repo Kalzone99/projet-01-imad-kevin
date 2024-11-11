@@ -9,3 +9,109 @@ const headers = {
     'Authorization': `Bearer ${API_TOKEN}`, // Utilise le token là
     
 };
+
+const input = document.querySelector(".search input ");
+const btn = document.querySelector(".search button");
+const container1 = document.querySelector(".splide .splide_list");
+const container2 = document.querySelector(".splide1 .splide_last");
+const container3 = document.querySelector(".splide2 .splide_genre");
+
+
+
+
+
+
+
+btn.addEventListener("click", () =>{
+    const query = input.value.trim();
+    fetchSearch(query);
+})
+
+
+const fetchSearch = async (query) => {
+    const respons = await fetch (`${BASE_URL}/search/movie?query=${query}`, {headers});
+    const data = await respons.json();
+    searchResults(data.results);
+
+
+    };
+fetchSearch("inception");
+
+
+const fetchLastest = async () => {
+    const respons = await fetch (`${BASE_URL}/movie/latest`, {headers});
+    const data = await respons.json();
+    lastestResults(data);
+
+};
+
+
+const fetchGenre = async () => {
+    const respons = await fetch (`${BASE_URL}/genre/movie/list`, {headers});
+    const data = await respons.json();
+    genreResults(data.genres);
+
+};
+
+
+
+
+
+const searchResults = (results) => {
+    container1.innerHTML ="";
+
+    results.forEach(result => {
+        const list = document.createElement("li");
+        list.className= "splide_slide";
+
+        const img = document.createElement("img");
+        img.src = `https://image.tmdb.org/t/p/w500 ${result.poster_path}`
+        img.alt = result.original_title
+
+        list.appendChild(img);
+        container1.appendChild(list)
+
+        
+    });
+};
+const lastestResults = (movie) => {
+    container2.innerHTML ="";
+
+        const list = document.createElement("li");
+        list.className= "splide_slide";
+
+        const img = document.createElement("img");
+        img.src = `https://image.tmdb.org/t/p/w500 ${movie.poster_path}`;
+        img.alt = movie.original_title
+
+        list.appendChild(img);
+        container2.appendChild(list)
+
+
+};
+
+const genreResults = (genres) => {
+    container3.innerHTML ="";
+
+    genres.forEach(genre => {
+        const list = document.createElement("li");
+        list.className= "splide_slide";
+
+        const img = document.createElement("img");
+        img.src = `https://image.tmdb.org/t/p/w500 ${genre.poster_path}`
+        img.alt = genre.original_title
+
+        const text =document.createElement("p");
+        text.textContent = text.name;
+
+        list.appendChild(img);
+        container3.appendChild(list)
+
+});
+};
+
+
+
+
+
+
